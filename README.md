@@ -1,66 +1,67 @@
-## Foundry
+# Foundry Fund Me - Curso de Solidity
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+Este repositório contém o projeto prático "Foundry Fund Me", parte do curso avançado de Solidity focado em testes, implantação e otimização de smart contracts utilizando Foundry.
 
-Foundry consists of:
+## 🚀 Introdução
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+Este projeto visa ensinar como configurar, testar e implantar smart contracts de forma eficiente e segura usando a suite de ferramentas Foundry. O curso cobre desde testes unitários até testes em redes forjadas e de staging.
 
-## Documentation
+### 📺 [Acessar o Curso Completo](https://github.com/Cyfrin/foundry-fund-me-f23)
 
-https://book.getfoundry.sh/
+## ⚙️ Configuração Inicial
 
-## Usage
+Para iniciar, clone este repositório e instale as dependências necessárias:
 
-### Build
+```bash
+git clone https://github.com/Cyfrin/foundry-fund-me-f23
+cd foundry-fund-me-f23
+forge install
 
-```shell
-$ forge build
+
+🧪 Como Executar os Testes
+Para rodar os testes do projeto:
+
+forge test
+forge coverage
+
+Testes Avançados
+Para testes mais específicos, utilize:
+
+forge test --match-test testPriceFeedVersionIsAccurate -vvv
+
 ```
 
-### Test
+🧩 Dependências
+Este projeto utiliza várias dependências importantes, incluindo:
 
-```shell
-$ forge test
-```
+Chainlink Brownie Contracts para integração com oráculos.
+Dependências adicionais listadas no arquivo foundry.toml.
+🛠 Refatorações e Otimizações
+Refatoração de Scripts de Implantação
+Configuração de Helper
+Mocking para simular interações de contratos em um ambiente controlado
+📚 Aprendizados Chave
+Durante o curso, abordamos tópicos importantes como:
 
-### Format
+Estratégias de Teste: Unitário, Integração, Forked e Staging.
+Otimização de Gas: Técnicas para reduzir o custo de gas em transações.
+Segurança de Smart Contracts: Uso de cheatcodes e práticas recomendadas.
+📦 Guia de Estilo e Melhores Práticas
+Adotamos o guia de estilo da Chainlink para Solidity.
+Uso de NatSpec para documentação de código.
+🗂 Estrutura do Projeto
+Descreva aqui a estrutura de arquivos e pastas do projeto.
 
-```shell
-$ forge fmt
-```
+🤝 Como Contribuir
+Para contribuir com o projeto, por favor siga nosso guia de contribuição.
 
-### Gas Snapshots
+📢 Mantenha-se Conectado!
+Siga os instrutores do curso no Twitter para mais atualizações:
 
-```shell
-$ forge snapshot
-```
+Patrick Collins: @PatrickAlphaC
+Updraft: @CyfrinUpdraft
 
-### Anvil
+📜 Licença
+Este projeto está sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.
 
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
+Este README está configurado para ser informativo e facilitar a contribuição e a interação com os envolvidos no curso. Certifique-se de que os links dos perfis do Twitter e outros URLs estão corretos para que os interessados possam acessar facilmente mais informações e recursos relacionados ao curso.
